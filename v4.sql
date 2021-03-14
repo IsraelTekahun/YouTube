@@ -21,12 +21,18 @@ INSERT INTO Books VALUES ('bk10', 'novel', 'au4', 642, 55, 2);*/
 
 -- select * from Books;
 
--- default values  ... unknown to category and 1 to period 
+-- default values  ... unknown to category and 1 to period
+	-- syntax: column name data type default value,
+-- ***************************************************************************** --
 
--- limit 
+-- limit
+	-- syntax: sql query limit #nr;
 -- select * from Books;
 -- select * from Books limit 2;
--- where 
+-- ***************************************************************************** --
+
+-- where
+	-- syntax: sql query where condition;
 /*
 select * from Books;
 select * from Books where Category = 'novel';
@@ -34,3 +40,4 @@ select * from Books where Author = 'au1';
 select * from Books where Period = 3;*/
 -- limit and where with int, null and strings
 -- select Name from Books where Period = 2 limit 2;
+
