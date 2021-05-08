@@ -1,0 +1,92 @@
+CREATE TABLE If not EXISTS Books (
+  Name varchar(100) NOT NULL,
+  Category varchar(100),
+  Author varchar(50) NOT NULL,
+  Pages INT NOT NULL,
+  Quantity INT NOT NULL,
+  Period INT,
+  PRIMARY KEY(Name)
+);
+
+
+
+/*INSERT INTO Books VALUES ('Cat Of Rainbows', 'Fantasy', 'Logan Black', 724, 8, 1);
+INSERT INTO Books VALUES ('Woman Of Miracles', 'Adventure', 'Aubrey Thomas', 114, 67, 3);
+INSERT INTO Books VALUES ('Little Dragons Of Life', 'Romance', 'Rudy Atkinson', 764, 56, 2);
+INSERT INTO Books VALUES ('Kings Of Life', 'Contemporary', 'Leigh Wilson', 796, 91, 2);
+INSERT INTO Books VALUES ('Kings And Owls', 'Dystopian', 'Tanner Stone', 203, 19, 3);
+INSERT INTO Books VALUES ('Toads And Little Ducks', 'Mystery', 'Ash Doyle', 973, 9, 4);
+INSERT INTO Books VALUES ('Statue Of The Moon', 'Horror', 'Taylor Lloyd', 208, 22, 1);
+INSERT INTO Books VALUES ('Closet Of The Stars', 'Thriller', 'Alexis Patel', 806, 29, 3);
+INSERT INTO Books VALUES ('Free With My Cousin', 'Paranormal', 'Kerry Palmer', 403, 99, 1);
+INSERT INTO Books VALUES ('Jumping With My Father', 'Historical fiction', 'Maddox Willis', 803, 87, 1);
+INSERT INTO Books VALUES ('Goat Of Riddles', 'Science Fiction', 'Lee Owen', 653, 35, 4);
+INSERT INTO Books VALUES ('Baby Of Dreams', 'Memoir', 'Gabby Hamilton', 98, 84, 4);
+INSERT INTO Books VALUES ('Toads Of The Moon', 'Cooking', 'Casey Parker', 734, 91, 4);
+INSERT INTO Books VALUES ('Rabbits In The River', 'Art', 'Lee Harrison', 676, 1, 1);
+INSERT INTO Books VALUES ('Dogs And Kids', 'Self-help  ', 'Rene Nicholson', 222, 6, 4);
+INSERT INTO Books VALUES ('Puppies And Kings', 'Personal', 'Aubrey Pearce', 138, 19, 4);
+INSERT INTO Books VALUES ('Flower Of Fantasy', 'Development', 'Carol Price', 266, 60, 2);
+INSERT INTO Books VALUES ('Pocket Of My Imagination', 'Motivational', 'Kiran Stewart', 906, 80, 4);
+INSERT INTO Books VALUES ('Present From My Family', 'Health', 'Jo John', 715, 32, 1);
+INSERT INTO Books VALUES ('Brave At Fantasy', 'History', 'Drew Burns', 884, 46, 3);
+INSERT INTO Books VALUES ('Lion Of Magic', 'Travel', 'Haiden Cooke', 970, 60, 2);
+INSERT INTO Books VALUES ('Puppy Of Wood', 'Guide ', 'Rudy Marshall', 589, 51, 2);
+INSERT INTO Books VALUES ('Cows Of Mysteries', 'How-to', 'Brynn Jackson', 981, 89, 1);
+INSERT INTO Books VALUES ('Sheep In Space', 'Families', 'Harper Poole', 218, 91, 1);
+INSERT INTO Books VALUES ('Bears And Little Dragons', 'Relationships', 'Jude Young', 908, 81, 3);
+INSERT INTO Books VALUES ('Toads And Little Dragons', 'Humor', 'Ash Campbell', 749, 10, 3);
+INSERT INTO Books VALUES ('Home Of Excelsior', 'Children', 'Billie Gallagher', 961, 59, 2);
+INSERT INTO Books VALUES ('Statue Of The Sun', 'Fantasy', 'Alexis Mccarthy', 360, 47, 2);
+INSERT INTO Books VALUES ('Brave At My Pet', 'Adventure', 'Sammy Patel', 119, 43, 3);
+INSERT INTO Books VALUES ('Cooking With The Fields', 'Romance', 'Alexis Morris', 899, 90, 4);
+INSERT INTO Books VALUES ('Cow Of Magic', 'Contemporary', 'Quinn Spencer', 691, 75, 2);
+INSERT INTO Books VALUES ('Mouse Of Miracles', 'Dystopian', 'Leigh Brown', 522, 27, 4);
+INSERT INTO Books VALUES ('Cats Of Life', 'Mystery', 'Reggie James', 158, 54, 1);
+INSERT INTO Books VALUES ('Birds In The River', 'Horror', 'Chris Shaw', 316, 64, 2);
+INSERT INTO Books VALUES ('Kings And Mice', 'Thriller', 'Brice Green', 12, 57, 1);
+INSERT INTO Books VALUES ('Cows And Goats', 'Paranormal', 'Addison Miller', 349, 56, 4);
+INSERT INTO Books VALUES ('Candle Of Wood', 'Historical fiction', 'Bennie Shaw', 302, 11, 2);
+INSERT INTO Books VALUES ('Field Of My Country', 'Science Fiction', 'Vic Miller', 464, 76, 3);
+INSERT INTO Books VALUES ('Cleaning At The River', 'Memoir', 'Maddox Miller', 499, 32, 1);
+INSERT INTO Books VALUES ('Back With My New Pet', 'Cooking', 'Sam Morgan', 672, 52, 1);
+INSERT INTO Books VALUES ('Owl Of My Dreams', 'Art', 'Ash Hopkins', 24, 82, 4);
+INSERT INTO Books VALUES ('Do it', 'Self-help  ', 'Charlie Mcdonald', 811, 37, 4);
+INSERT INTO Books VALUES ('Boys Of Rain', 'Personal', 'Alex Mcdonald', 898, 11, 3);
+INSERT INTO Books VALUES ('Birds Of My House', 'Development', 'Brynn Harris', 111, 22, 3);
+INSERT INTO Books VALUES ('People And Toads', 'Motivational', 'Lynn Watts', 259, 14, 1);
+INSERT INTO Books VALUES ('Puppies And Toads', 'Health', 'Dane Harrison', 371, 62, 4);
+INSERT INTO Books VALUES ('Candle Of My Imagination', 'History', 'Cameron Grant', 910, 97, 2);
+INSERT INTO Books VALUES ('Statue Of Mysteries', 'Travel', 'Reed Knight', 884, 82, 4);
+INSERT INTO Books VALUES ('Adventure Of Water', 'Guide ', 'Lane Duncan', 96, 54, 1);
+INSERT INTO Books VALUES ('Puzzling With Fantasy', 'How-to', 'Blair Taylor', 286, 84, 4);*/
+
+-- select * from Books;
+-- select count(*) from Books;
+
+-- syntax: >= <=
+-- select * from Books where Period >= 3;
+
+-- AND/OR syntax: condition 1 (እውነት ሐሰት) AND/OR condition 2 (እውነት ሐሰት)
+
+-- AND
+-- select count(*) from Books where Period > 2 AND Pages > 300;
+-- select count(*) from Books where Period != 2 AND Pages > 300;
+
+-- OR
+select * from Books where Category = 'Horror' OR Category = 'Children';
+
+-- select * from Books where (Pages <= 100 AND Period = 1);
+-- select * from Books where (Pages >= 500 AND Period = 1);
+-- select count(*) from Books where (Pages <= 100 AND Period = 1) OR (Pages >= 500 AND Period = 1);
+
+-- count(*) from Books where Pages > 100 OR (Quantity >= 50 AND Period > 2);
+-- select count(*) from Books where Pages > 100 OR Quantity >= 50 AND Period > 2;
+-- select count(*) from Books where Quantity >= 650 AND Period = 1 OR Quantity <= 100 AND Period = 1;
+-- select count(*) from Books where (Pages <= 100 AND Period = 1) OR (Pages >= 500 AND Period = 1);
+-- select count(*) from Books where Category = 'Children' OR (Category = 'Horror' AND Pages <= 100);
+
+-- select * from Books where Category != 'Horror' OR Category != 'Personal';
+-- select * from Books where NOT Category = 'Horror' OR NOT Category = 'Personal';
+-- select * from Books where Category NOT IN ('Horror', 'Personal');
+-- select * from Books where NOT Category = 'Horror' OR NOT Category = 'Personal' LIMIT 3;
